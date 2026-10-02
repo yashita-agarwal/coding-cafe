@@ -1,0 +1,8 @@
+1. --global means the Git configuration applies to all repositories for the current user on the computer. If you leave it out, the configuration applies only to the current repository.
+2. ls -a shows a hidden .git directory that does not appear with normal ls. It contains Git's internal data, including the repository's history, configuration, and information about tracked files.
+3. Git will usually offer to track roughly all the files in the coding-cafe folder, potentially hundreds or thousands if .venv/ is present. The files inside .venv/ are not written by us; they are part of the Python virtual environment.
+4. After creating .gitignore, the files inside .venv/, along with other ignored files such as __pycache__/ and *.pyc, disappear from the git status list. This happens because Git now knows to ignore them.
+5. Yes, .gitignore itself should be committed because it tells Git which files and folders should be ignored in the repository. If it were ignored too, other people who clone the repository would not automatically get the same ignore rules.
+6. README.md moves from “Untracked files” to “Changes to be committed.” In the three-places model, this means the file moved from the working directory to the staging area using git add
+7. After the commit, Git prints information showing that a new commit was created and reports the files changed, insertions, and deletions. The exact number of changed files depends on the contents of the user's coding-cafe folder, so it cannot be determined from the lab sheet alone.
+8. The first seven characters are the short version of the commit's SHA-1 hash, which identifies that specific commit. They are used as a convenient unique reference for finding and talking about a particular commit in Git history.
